@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the task."
+    },
+    "details": {
+      "type": "string",
+      "description": "Detailed description of the task."
+    },
+    "completed": {
+      "type": "boolean",
+      "description": "Indicates whether the task is completed."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp when the task was created."
+    },
+    "user": {
+      "type": "string",
+      "pattern": "^/users/[a-zA-Z0-9]+$",
+      "description": "Reference to the user who owns the task."
+    }
+  },
+  "required": ["title", "completed", "created", "user"]
+}
