@@ -403,7 +403,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                                     FlutterFlowTheme.of(context).info,
                                 actionButtonForegroundColor:
                                     FlutterFlowTheme.of(context).primaryText,
-                                iconSize: 24.0,
+                                iconSize: 25.0,
                               );
                             },
                           );
