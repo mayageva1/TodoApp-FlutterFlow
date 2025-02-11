@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "13669464068",
+    "project_id": "todoprpject-tgve65",
+    "storage_bucket": "todoprpject-tgve65.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13669464068:android:6cb51ce37fa196dc7b9d51",
+        "android_client_info": {
+          "package_name": "com.mycompany.todoproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZy4mM5Lj_2wRywXD92h4V5W-TStDNV00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
