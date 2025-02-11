@@ -214,7 +214,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                 ),
-                            hintText: 'Name....',
+                            hintText: 'What\'s your name?',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelLarge
                                 .override(
