@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'onboard_model.dart';
@@ -13,6 +14,9 @@ export 'onboard_model.dart';
 
 class OnboardWidget extends StatefulWidget {
   const OnboardWidget({super.key});
+
+  static String routeName = 'onboard';
+  static String routePath = '/onboard';
 
   @override
   State<OnboardWidget> createState() => _OnboardWidgetState();
@@ -57,7 +61,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -71,7 +75,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, -1.0),
+                            alignment: AlignmentDirectional(0.0, -1.0),
                             child: Text(
                               'Profile',
                               style: FlutterFlowTheme.of(context)
@@ -168,7 +172,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 40.0, 0.0, 0.0),
                               child: FlutterFlowIconButton(
                                 borderColor:
@@ -192,14 +196,14 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         width: double.infinity,
                         child: TextFormField(
                           controller: _model.nameFieldTextController,
                           focusNode: _model.nameFieldFocusNode,
                           onChanged: (_) => EasyDebounce.debounce(
                             '_model.nameFieldTextController',
-                            const Duration(milliseconds: 2000),
+                            Duration(milliseconds: 2000),
                             () => safeSetState(() {}),
                           ),
                           autofocus: false,
@@ -238,14 +242,14 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -254,7 +258,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 26.0, 24.0, 26.0),
                             suffixIcon: _model
                                     .nameFieldTextController!.text.isNotEmpty
@@ -263,7 +267,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                                       _model.nameFieldTextController?.clear();
                                       safeSetState(() {});
                                     },
-                                    child: const Icon(
+                                    child: Icon(
                                       Icons.clear,
                                       size: 24.0,
                                     ),
@@ -281,14 +285,14 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                               .asValidator(context),
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         width: double.infinity,
                         child: TextFormField(
                           controller: _model.majorFieldTextController,
                           focusNode: _model.majorFieldFocusNode,
                           onChanged: (_) => EasyDebounce.debounce(
                             '_model.majorFieldTextController',
-                            const Duration(milliseconds: 2000),
+                            Duration(milliseconds: 2000),
                             () => safeSetState(() {}),
                           ),
                           autofocus: false,
@@ -327,14 +331,14 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -343,7 +347,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                            contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 26.0, 24.0, 26.0),
                             suffixIcon: _model
                                     .majorFieldTextController!.text.isNotEmpty
@@ -352,7 +356,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                                       _model.majorFieldTextController?.clear();
                                       safeSetState(() {});
                                     },
-                                    child: const Icon(
+                                    child: Icon(
                                       Icons.clear,
                                       size: 24.0,
                                     ),
@@ -371,7 +375,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          final datePickedDate = await showDatePicker(
+                          final _datePickedDate = await showDatePicker(
                             context: context,
                             initialDate: getCurrentTimestamp,
                             firstDate: DateTime(1900),
@@ -408,27 +412,31 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                             },
                           );
 
-                          if (datePickedDate != null) {
+                          if (_datePickedDate != null) {
                             safeSetState(() {
                               _model.datePicked = DateTime(
-                                datePickedDate.year,
-                                datePickedDate.month,
-                                datePickedDate.day,
+                                _datePickedDate.year,
+                                _datePickedDate.month,
+                                _datePickedDate.day,
                               );
+                            });
+                          } else if (_model.datePicked != null) {
+                            safeSetState(() {
+                              _model.datePicked = getCurrentTimestamp;
                             });
                           }
                         },
                         text: 'Set Birthday',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.calendar_today,
                           size: 25.0,
                         ),
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 70.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -446,7 +454,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                           borderRadius: BorderRadius.circular(24.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
                 FFButtonWidget(
@@ -457,16 +465,16 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                       birthday: _model.datePicked,
                     ));
 
-                    context.goNamed('tasks');
+                    context.goNamed(TasksWidget.routeName);
                   },
                   text: 'Complete Profile',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 70.0,
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle:
                         FlutterFlowTheme.of(context).labelMedium.override(

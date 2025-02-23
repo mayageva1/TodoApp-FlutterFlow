@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'editing_mode_model.dart';
 export 'editing_mode_model.dart';
@@ -14,6 +15,9 @@ class EditingModeWidget extends StatefulWidget {
   });
 
   final TasksRecord? taskDoc;
+
+  static String routeName = 'editingMode';
+  static String routePath = '/details';
 
   @override
   State<EditingModeWidget> createState() => _EditingModeWidgetState();
@@ -70,7 +74,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -81,7 +85,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: EdgeInsets.all(24.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -100,7 +104,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                                 size: 30.0,
                               ),
                               onPressed: () async {
-                                context.pushNamed('tasks');
+                                context.pushNamed(TasksWidget.routeName);
                               },
                             ),
                             FlutterFlowIconButton(
@@ -144,7 +148,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                        SizedBox(
+                        Container(
                           width: double.infinity,
                           child: TextFormField(
                             controller: _model.textController1,
@@ -168,28 +172,28 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -197,7 +201,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                               ),
                               filled: true,
                               fillColor: _model.editingMode
-                                  ? const Color(0x7157636C)
+                                  ? Color(0x7157636C)
                                   : FlutterFlowTheme.of(context)
                                       .primaryBackground,
                             ),
@@ -214,7 +218,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 0.0),
                           child: Text(
                             'Details',
@@ -228,7 +232,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                                 ),
                           ),
                         ),
-                        SizedBox(
+                        Container(
                           width: double.infinity,
                           child: TextFormField(
                             controller: _model.textController2,
@@ -251,14 +255,14 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -280,7 +284,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                               ),
                               filled: true,
                               fillColor: _model.editingMode
-                                  ? const Color(0x7157636C)
+                                  ? Color(0x7157636C)
                                   : FlutterFlowTheme.of(context)
                                       .primaryBackground,
                             ),
@@ -297,7 +301,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -323,9 +327,9 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 70.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -344,7 +348,7 @@ class _EditingModeWidgetState extends State<EditingModeWidget> {
                             ),
                           ),
                         ),
-                      ].divide(const SizedBox(height: 12.0)),
+                      ].divide(SizedBox(height: 12.0)),
                     ),
                   ),
                 ),
